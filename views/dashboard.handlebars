@@ -1,14 +1,13 @@
 {{!-- blog posts --}}
 <div id="blogPosts">
     {{#each blogs}}
-    <a href="/blog/{{id}}">
-        <div class="card">
+        <div class="card my-3 text-black">
             <div class="row card-header">
                 <div class="col-lg-6">
                     <h5>{{title}}</h5>
                 </div>
                 <div class="col-lg-6">
-                    <p> Posted by: {{user.username}} on {{date_created}}</p>
+                    <p> Posted by: {{user.username}} on {{format_date date_created}}</p>
                 </div>
             </div>
     
@@ -17,7 +16,6 @@
                 
             </div>
         </div>
-    </a>
     {{/each}}
 </div>
 
