@@ -10,8 +10,7 @@ const handleSubmit = (event) => {
   const { username: usernameInput, password: passwordInput } =
     event.target.elements;
   const userData = {
-    name: nameInput?.value,
-    email: emailInput.value,
+    username: usernameInput.value,
     password: passwordInput.value,
   };
 

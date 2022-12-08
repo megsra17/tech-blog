@@ -13,6 +13,19 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(updatedBlog);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   try {
     const blogData = await Blog.destroy({

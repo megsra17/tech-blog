@@ -1,11 +1,10 @@
 <h1>Blogs</h1>
 
 {{#each blogs}}
-<a href="/blog/{{id}}">
-<div class="card">
+<div class="card text-black my-3">
     <div class="row card-header">
         <div class="col-lg-6">
-            <h5>{{title}}</h5>
+            <h5 class="text-black">{{title}}</h5>
         </div>
         <div class="col-lg-6">
         <p> Posted by: {{user.username}} on {{date_created}}</p>
@@ -16,5 +15,4 @@
         <p class="card-text">{{content}}</p>
     </div>
 </div>
-</a>
 {{/each}}
